@@ -1,0 +1,13 @@
+language: ruby
+
+sudo: false
+
+install:
+  - true
+
+script:
+  - curl -svf 'https://openrct2.org/altapi/?command=push-build' || true
+
+notifications:
+  email: false
+  

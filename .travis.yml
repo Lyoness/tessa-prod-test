@@ -1,12 +1,14 @@
-language: ruby
+language: android
+
+jdk: oraclejdk8
 
 sudo: false
 
-install:
-  - true
-
-script:
-  - curl -svf 'https://openrct2.org/altapi/?command=push-build' || true
-
-notifications:
-  email: false
+android:
+  components:
+    - tools
+    - build-tools-25
+    - android-25
+    - extra-android-m2repository
+    - extra-google-m2repository
+    - extra-google-google_play_services
